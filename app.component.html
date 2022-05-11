@@ -1,0 +1,6 @@
+<h1>App Component</h1>
+<input type="text" #parentTextBox (keyup)="0">
+
+<br><br>
+<child [appTextBoxValue] ="parentTextBox.value"></child>
+<router-outlet></router-outlet>
