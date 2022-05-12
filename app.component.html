@@ -1,6 +1,7 @@
 <h1>App Component</h1>
 <input type="text" #parentTextBox (keyup)="0">
+<input type="text" [value]="childTextBoxValue"> <!-- showing the value childTextBox in parent TextBox-->
 
 <br><br>
-<child [appTextBoxValue] ="parentTextBox.value"></child>
+<child [appTextBoxValue] ="parentTextBox.value"  (childEvent)="childTextBoxValue=$event"></child> <!--assigning the childEvent to childTextBoxValue -->
 <router-outlet></router-outlet>
